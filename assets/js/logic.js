@@ -131,4 +131,6 @@ function saveData() {
   // Store the updated data back into local storage
   localStorage.setItem("highscores", JSON.stringify(highscores));
   
+  // Navigate to "highscores.html"
+  window.location.href = "highscores.html";
 };
