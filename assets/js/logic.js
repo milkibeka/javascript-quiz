@@ -7,6 +7,7 @@ var timer=document.getElementById("time");
 var timeLeft = myQuestions.length * 10;
 var questionEl= document.getElementById("question-title")
 var choicesEl=document.getElementById("choices");
+var feedbackEl=document.getElementById("feedback")
 
 // Start Quiz
 
@@ -37,17 +38,17 @@ function startTimer() {
   }
 // Show Questions
 function showQuestions() {
-    var currentQuestion = myQuestions[currentQuestionIndex];
-  
-    questionEl.textContent = currentQuestion.question;
-  
-    choicesEl.innerHTML = "";
-  
-    currentQuestion.choices.forEach(function (choice, i) {
-      var choiceBtn = document.createElement("button");
-      choiceBtn.setAttribute("value", choice);
-      choiceBtn.textContent = i + 1 + ". " + choice;
-      choiceBtn.onclick = answerSubmit;
-      choicesEl.appendChild(choiceBtn);
-    });
-  }
+  var currentQuestion = myQuestions[currentQuestionIndex];
+
+  questionEl.textContent = currentQuestion.question;
+
+  choicesEl.innerHTML = "";
+
+  currentQuestion.choices.forEach(function (choice, i) {
+    var choiceBtn = document.createElement("button");
+    choiceBtn.setAttribute("value", choice);
+    choiceBtn.textContent = i + 1 + ". " + choice;
+    choiceBtn.onclick = answerSubmit;
+    choicesEl.appendChild(choiceBtn);
+  });
+}
