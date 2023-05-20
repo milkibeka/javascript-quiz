@@ -15,6 +15,7 @@ var score=0;
 var endScreen=document.getElementById("end-screen");
 var finalScore = document.getElementById("final-score")
 var submitBtn = document.getElementById("submit");
+var initialsEl = document.getElementById("initials")
 
 // Start Quiz
 
