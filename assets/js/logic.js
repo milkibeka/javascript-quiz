@@ -5,6 +5,8 @@ var questionscrn=document.getElementById("questions");
 var startbtn= document.getElementById("start");
 var timer=document.getElementById("time");
 var timeLeft = myQuestions.length * 10;
+var questionEl= document.getElementById("question-title")
+var choicesEl=document.getElementById("choices");
 
 // Start Quiz
 
