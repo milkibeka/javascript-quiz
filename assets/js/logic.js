@@ -11,6 +11,7 @@ var feedbackEl=document.getElementById("feedback")
 var correctSound = document.getElementById("correctSound");
 var wrongSound = document.getElementById("wrongSound");
 var currentQuestionIndex=0;
+var score=0;
 
 // Start Quiz
 
