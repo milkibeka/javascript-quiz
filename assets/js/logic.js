@@ -112,3 +112,23 @@ clearInterval(timerInterval);
 }
 // Save initials and final score to local storage
 submitBtn.addEventListener("click", saveData);
+
+function saveData() {
+  // Retrieve existing data from local storage or initialize an empty array
+  
+  var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+  // Create a new userInfo object
+  var initials=initialsEl.value.toUpperCase();
+  var newScore = {
+    initials: initials,
+    score: score
+  };
+
+  // Add the new userInfo to the existing data
+  highscores.push(newScore);
+
+  // Store the updated data back into local storage
+  localStorage.setItem("highscores", JSON.stringify(highscores));
+  
+};
