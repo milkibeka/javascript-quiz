@@ -68,4 +68,20 @@ function answerSubmit() {
       score+=10;
       correctSound.play();
     }
+    feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function () {
+      feedbackEl.setAttribute("class", "feedback hide");
+    }, 1000);
+  
+    if (myQuestions.length > currentQuestionIndex + 1) {
+      setTimeout(function () {
+        showQuestions();
+      }, 1000);
+      currentQuestionIndex++; 
+  
+    } else {
+      setTimeout(function () {
+        completeQuiz();
+      }, 1000);
+    }
   }
