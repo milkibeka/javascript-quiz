@@ -8,6 +8,9 @@ var timeLeft = myQuestions.length * 10;
 var questionEl= document.getElementById("question-title")
 var choicesEl=document.getElementById("choices");
 var feedbackEl=document.getElementById("feedback")
+var correctSound = document.getElementById("correctSound");
+var wrongSound = document.getElementById("wrongSound");
+var currentQuestionIndex=0;
 
 // Start Quiz
 
