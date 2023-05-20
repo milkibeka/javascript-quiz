@@ -14,6 +14,7 @@ var currentQuestionIndex=0;
 var score=0;
 var endScreen=document.getElementById("end-screen");
 var finalScore = document.getElementById("final-score")
+var submitBtn = document.getElementById("submit");
 
 // Start Quiz
 
@@ -108,3 +109,5 @@ clearInterval(timerInterval);
 // Display  score
  finalScore.textContent = score;
 }
+// Save initials and final score to local storage
+submitBtn.addEventListener("click", saveData);
