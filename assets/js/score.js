@@ -14,3 +14,8 @@ highscores.forEach((score) => {
 
 var clearBtn = document.getElementById("clear");
 clearBtn.addEventListener("click", clearData);
+
+function clearData() {
+    localStorage.removeItem("highscores");
+    scoresList.innerHTML = ''; // Clear the list elements from the HTML
+  }
