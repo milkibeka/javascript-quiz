@@ -12,6 +12,8 @@ var correctSound = document.getElementById("correctSound");
 var wrongSound = document.getElementById("wrongSound");
 var currentQuestionIndex=0;
 var score=0;
+var endScreen=document.getElementById("end-screen");
+var finalScore = document.getElementById("final-score")
 
 // Start Quiz
 
@@ -66,11 +68,11 @@ function answerSubmit() {
   
       }
       feedbackEl.textContent = "Wrong!";
-      
+     // wrongSound.play(); 
     } else {
       feedbackEl.textContent = "Correct!";
       score+=10;
-     
+    //  correctSound.play();
     }
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function () {
@@ -89,3 +91,20 @@ function answerSubmit() {
       }, 1000);
     }
   }
+  
+// End Quiz
+function completeQuiz() {
+  if (timeLeft>0) {
+    timeLeft=0;
+    timer.innerText=timeLeft;
+  };
+clearInterval(timerInterval); 
+
+//Hide questtions screen
+ questionscrn.classList.add("hide");
+ 
+// Display  end-screen
+ endScreen.classList.remove("hide");
+// Display  score
+ finalScore.textContent = score;
+}
