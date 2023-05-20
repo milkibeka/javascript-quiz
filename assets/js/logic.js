@@ -19,3 +19,15 @@ function startQuiz() {
     
         showQuestions();
     };
+    //Start Timer
+function startTimer() {
+    timerInterval = setInterval(function () {
+      if (timeLeft > 0) {
+        timeLeft--;
+        timer.textContent = timeLeft;
+      } else {
+        completeQuiz();
+        
+      }
+    }, 1000);
+  }
