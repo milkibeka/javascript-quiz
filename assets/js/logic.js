@@ -3,6 +3,9 @@ var startbtn= document.getElementById("start");
 var startscrn=document.getElementById("start-screen");
 var questionscrn=document.getElementById("questions");
 var startbtn= document.getElementById("start");
+var timer=document.getElementById("time");
+var timeLeft = myQuestions.length * 10;
+
 // Start Quiz
 
 startbtn.addEventListener("click", startQuiz);
@@ -26,8 +29,7 @@ function startTimer() {
         timeLeft--;
         timer.textContent = timeLeft;
       } else {
-        completeQuiz();
-        
+        completeQuiz(); 
       }
     }, 1000);
   }
