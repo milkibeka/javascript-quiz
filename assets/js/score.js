@@ -11,3 +11,6 @@ highscores.forEach((score) => {
   scoreElement.textContent = `${score.initials}: ${score.score}`;
   scoresList.appendChild(scoreElement);
 });
+
+var clearBtn = document.getElementById("clear");
+clearBtn.addEventListener("click", clearData);
