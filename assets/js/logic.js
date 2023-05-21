@@ -44,7 +44,9 @@ function startTimer() {
       }
     }, 1000);
   }
-// Show Questions
+
+  // Show Questions
+
 function showQuestions() {
   var currentQuestion = myQuestions[currentQuestionIndex];
 
@@ -60,7 +62,10 @@ function showQuestions() {
     choicesEl.appendChild(choiceBtn);
   });
 }
-//Choose and answer and check if it is correct
+
+
+//Submit an answer and check if it is correct
+
 function answerSubmit() {
     if (this.value !== myQuestions[currentQuestionIndex].answer) {
       timeLeft -= 10;
@@ -95,6 +100,7 @@ function answerSubmit() {
   }
   
 // End Quiz
+
 function completeQuiz() {
   if (timeLeft>0) {
     timeLeft=0;
@@ -110,7 +116,10 @@ clearInterval(timerInterval);
 // Display  score
  finalScore.textContent = score;
 }
+
+
 // Save initials and final score to local storage
+
 submitBtn.addEventListener("click", saveData);
 
 function saveData() {
