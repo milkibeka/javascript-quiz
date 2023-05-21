@@ -70,11 +70,11 @@ function answerSubmit() {
   
       }
       feedbackEl.textContent = "Wrong!";
-     // wrongSound.play(); 
+     wrongSound.play(); 
     } else {
       feedbackEl.textContent = "Correct!";
       score+=10;
-    //  correctSound.play();
+    correctSound.play();
     }
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function () {
