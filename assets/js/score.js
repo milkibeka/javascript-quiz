@@ -18,6 +18,6 @@ clearBtn.addEventListener("click", clearData);
 function clearData() {
     localStorage.removeItem("highscores");
 
-    // Clear the list elements from the HTML
+// Clear the list elements from the HTML
     scoresList.innerHTML = ''; 
   }
